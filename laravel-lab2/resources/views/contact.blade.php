@@ -15,17 +15,24 @@
             <li><a href="{{ route('contact') }}">Contact Us</a></li>
         </ul>
     </nav>
-
-    <!--Home-->
-    <section id="home" class="section">
+    <!--Contact Us -->
+    <section id="contact" class="section">
         <div class="container">
             <header>
-                <h1>Welcome to Our Blog</h1>
+                <h1>Contact Us</h1>
             </header>
-            <p>This is where the latest articles and blog posts will appear. Enjoy reading!</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
         </div>
     </section>
-
+    
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

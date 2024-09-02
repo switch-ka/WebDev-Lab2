@@ -15,26 +15,14 @@
             <li><a href="{{ route('contact') }}">Contact Us</a></li>
         </ul>
     </nav>
-
-    <!--Home-->
-    <section id="home" class="section">
+    <!--About Us-->
+    <section id="about" class="section">
         <div class="container">
             <header>
-                <h1>Welcome to Our Blog</h1>
+                <h1>About Us</h1>
             </header>
-            <p>This is where the latest articles and blog posts will appear. Enjoy reading!</p>
+            <p>Learn more about us and what we do. We are passionate about sharing insightful content with our readers.</p>
         </div>
     </section>
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
