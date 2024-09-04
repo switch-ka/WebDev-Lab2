@@ -7,34 +7,32 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body>
-    <!--Nav -->
+
+    <video autoplay muted loop class="video-background" preload="auto">
+        <source src="/images/carvid4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <nav class="navbar">
         <ul>
             <li><a href="{{ route('home') }}">Home</a></li>
             <li><a href="{{ route('about') }}">About Us</a></li>
             <li><a href="{{ route('contact') }}">Contact Us</a></li>
+            @if (session('username'))
+                <li><a href="{{ route('welcome') }}">Logout</a></li>
+            @endif
         </ul>
     </nav>
 
-    <!--Home-->
     <section id="home" class="section">
         <div class="container">
             <header>
-                <h1>Welcome to Our Blog</h1>
+            <h1>{{ $message }}</h1>
             </header>
-            <p>This is where the latest articles and blog posts will appear. Enjoy reading!</p>
         </div>
     </section>
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <footer class="footer">
+                <p>&copy; 2024 JDM. All rights reserved.</p>
+            </footer>
 </body>
 </html>
